@@ -332,3 +332,28 @@ p { margin: 0 0 .8em; }
 @media (max-width: 480px) {
   .cards-4 { grid-template-columns: 1fr; }
 }
+
+/* Why choose: four steps and expandable reasons */
+.pillars { display: grid; gap: 16px; }
+.pillar { background: #fff; border-radius: var(--radius); padding: 22px 24px; border-left: 4px solid var(--green); }
+.pillar h3 { margin-bottom: 8px; }
+.pillar p, .pillar li { color: var(--muted); }
+.pillar ul { margin: 0; padding-left: 20px; }
+.pillar p:last-child { margin-bottom: 0; }
+.pillars .btn { justify-self: start; margin-top: 8px; }
+.sticky-img { position: sticky; top: 100px; }
+.reason-sub { margin-top: 64px; }
+.reasons { align-items: start; }
+.reasons details { cursor: pointer; }
+.reasons summary { list-style: none; position: relative; padding-right: 28px; }
+.reasons summary::-webkit-details-marker { display: none; }
+.reasons summary::after { content: "+"; position: absolute; right: 0; top: 0; font-size: 1.4rem; line-height: 1; color: var(--green-dark); }
+.reasons details[open] summary::after { content: "−"; }
+.reasons summary h3 { margin-bottom: 4px; }
+.reasons summary p { margin: 0; color: var(--muted); font-size: .95rem; }
+.reasons details > p, .reasons details > ul { margin: 14px 0 0; padding-top: 14px; border-top: 1px dashed var(--border); color: var(--text); font-size: .95rem; }
+.reasons details > ul { padding-left: 20px; }
+
+@media (max-width: 760px) {
+  .sticky-img { position: static; max-width: 320px; margin: 0 auto; }
+}
