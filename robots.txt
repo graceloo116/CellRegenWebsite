@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://graceloo116.github.io/CellRegenWebsite/sitemap.xml
