@@ -102,7 +102,7 @@ p { margin: 0 0 .8em; }
 
 /* Stats */
 .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.stat { background: #fff; border-radius: var(--radius); padding: 28px 20px; text-align: center; box-shadow: 0 6px 20px rgba(0, 0, 0, .04); }
+.stat { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 20px; text-align: center; }
 .stat-num { display: block; font-size: 2rem; font-weight: 700; color: var(--green-dark); margin-bottom: 8px; }
 .stat h3 { margin-bottom: 4px; }
 .stat p { margin: 0; color: var(--muted); font-size: .95rem; }
@@ -263,13 +263,13 @@ p { margin: 0 0 .8em; }
 
 /* ---------- CELLREGEN365 theme ---------- */
 .theme-cellregen {
-  --green: #8a3ffc;
-  --green-dark: #6a26c9;
-  --mint: #f5f0ff;
-  --sky: #eef6ff;
-  --border: #e3dcf2;
+  --green: #5B21B6;
+  --green-dark: #4C1D95;
+  --mint: #ffffff;
+  --sky: #F7F5FA;
+  --border: #E6E2ED;
 }
-.theme-cellregen .cta { background: linear-gradient(135deg, #3b1f5e, #6a26c9); }
+.theme-cellregen .cta { background: var(--green-dark); }
 .theme-cellregen .site-footer { background: #241338; color: #ddd3ee; }
 
 .brand-text { font-weight: 800; font-size: 1.35rem; letter-spacing: .04em; color: #3b1f5e; text-decoration: none; }
@@ -278,7 +278,7 @@ p { margin: 0 0 .8em; }
 .footer-brand span { color: #c9a8ff; }
 
 .hero-cellregen { background-image: url("images/man-headache-in-bed-fatigue.webp"); background-position: center 30%; }
-.hero-cellregen::before { background: rgba(36, 19, 56, .62); }
+.hero-cellregen::before { background: rgba(28, 14, 46, .74); }
 .eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: .85rem; font-weight: 600; color: #e6d8ff; margin-bottom: 12px; }
 
 .h3 { font-size: 1.15rem; }
