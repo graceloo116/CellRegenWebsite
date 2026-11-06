@@ -17,7 +17,7 @@ links.querySelectorAll("a").forEach((a) =>
 // Carousels: arrow buttons and autoplay (pauses on hover/touch)
 document.querySelectorAll(".carousel").forEach((carousel) => {
   const track = carousel.querySelector(".track");
-  const step = () => track.querySelector("img").offsetWidth + 16;
+  const step = () => track.firstElementChild.offsetWidth + (parseFloat(getComputedStyle(track).columnGap) || 0);
 
   const go = (dir) => {
     const atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
@@ -32,7 +32,7 @@ document.querySelectorAll(".carousel").forEach((carousel) => {
     let paused = false;
     ["mouseenter", "touchstart"].forEach((e) => carousel.addEventListener(e, () => (paused = true), { passive: true }));
     ["mouseleave", "touchend"].forEach((e) => carousel.addEventListener(e, () => (paused = false)));
-    setInterval(() => !paused && go(1), 3000);
+    setInterval(() => !paused && go(1), Number(carousel.dataset.interval) || 3000);
   }
 });
 
